@@ -66,7 +66,7 @@ postscript ('Mandel_housing_red.m.eps', width= 5, height= 5,
 par (fig= c (0.6, 0.95, 0.55, 0.9), mar= c (0, 0, 0, 0), bty= 'n')
 biplot (red.pca, col= c ('white', 'black'),
         xaxt= 'n', yaxt= 'n', xlab= '', ylab= '',
-        cex= c (0, 0.5), xlabs= rep ('o', nrow (red.df))),
+        cex= c (0, 0.5), xlabs= rep ('o', nrow (red.df)),
         ylabs= 1:5)
 
 par (fig= c (0.7, 0.98, 0.15, 0.3), mar= c (0, 4, 0, 0), las= 1, bty= 'n', new= TRUE)
@@ -78,7 +78,7 @@ plot (jitter (Comp.2, 20) ~ jitter (Comp.1, 20), red.df,
       col= ifelse (a.origin == 'b', 'red', 'blue'), cex= 1.2,
       xlab= '',
       ylab= '')
-mtext ('Extensitivity [PC 1]', 1, line= 2.2, las= 0)
+mtext ('Extensivity [PC 1]', 1, line= 2.2, las= 0)
 mtext ('Early slaughter [PC 2]', 2, line= 2.5, las= 0, cex= 1.1)
 dev.off ()
 
@@ -133,7 +133,7 @@ plot (jitter (Comp.2, 20) ~ jitter (Comp.1, 20), replCa.df,
       col= ifelse (a.origin == 'b', 'red', 'blue'), cex= 1.2,
       xlab= '',
       ylab= '')
-mtext ('Extensitivity [PC 1]', 1, line= 2.2, las= 0)
+mtext ('Extensivity [PC 1]', 1, line= 2.2, las= 0)
 mtext ('Early transport [PC 2]', 2, line= 2.5, las= 0, cex= 1.1)
 dev.off ()
 
@@ -430,7 +430,7 @@ plot (Comp.2 ~ Comp.1, meat.df,
       xlab= '',
       ylab= '')
 mtext ('Overall welfare risk [PC 1]', 1, line= 2.2, las= 0)
-mtext ('Risk for excessiv heat [PC 2]', 2, line= 2.5, las= 0, cex= 1.1)
+mtext ('Risk for excessive heat [PC 2]', 2, line= 2.5, las= 0, cex= 1.1)
 dev.off ()
 
 
@@ -527,8 +527,8 @@ axis (2, labels= FALSE)
 
 mtext ('Overall welfare risk', side= 2, las= 0, line= 2, font= 2)
 mtext ('[scale of PC 1]', side= 2, las= 0, line= 1)
-mtext ('low\nwelfare\nrisk', side= 2, at= -5, line= 1)
-mtext ('high\nwelfare\nrisk', side= 2, at= 7, line= 1)
+mtext ('lower\nwelfare\nrisk', side= 2, at= -5, line= 1)
+mtext ('higher\nwelfare\nrisk', side= 2, at= 7, line= 1)
 text (c (1, 2, 3.5, 4.5, 6, 7, 8.5, 9.5), rep (-6.2, 3),
       boxplot (Comp.1 ~ origin + categ, meat.df, plot= FALSE) [['n']], cex= 0.7)
 text (0.5, -6.2, 'N=', cex= 0.7)
@@ -789,8 +789,8 @@ axis (2, labels= FALSE)
 
 mtext ('Overall welfare risk', side= 2, las= 0, line= 2, font= 2)
 mtext ('[scale of PC 1]', side= 2, las= 0, line= 1)
-mtext ('low\nwelfare\nrisk', side= 2, at= -5, line= 1)
-mtext ('high\nwelfare\nrisk', side= 2, at= 7, line= 1)
+mtext ('lower\nwelfare\nrisk', side= 2, at= -5, line= 1)
+mtext ('higher\nwelfare\nrisk', side= 2, at= 7, line= 1)
 text (c (1:6, seq (7.5, 12.5, 1), 14:19, seq (20.5, 25.5, 1)),
       rep (-6.2, 24),
       boxplot (Comp.1 ~ region + origin + categ, meat.df, plot= FALSE) [['n']], cex= 0.7)
